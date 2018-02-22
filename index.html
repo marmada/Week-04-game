@@ -1,0 +1,143 @@
+<! DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- JS / JQuery Fiels -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!--font-family: 'Press Start 2P', cursive;-->
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <!--font-family: 'Russo One', sans-serif;-->
+    <!-- Images Credit:
+    Green : http://moziru.com/explore/Crystal%20clipart%20emerald/#go_post_4670_emerald-clipart-6.png
+    Pink : https://vignette.wikia.nocookie.net/starwars/images/9/9a/Uprising_UI_Prop_Crystal_Faction_Kouhun_06.png/revision/latest?cb=20151014121633
+    Blue : https://www.iconfinder.com/icons/515131/adamant_crystal_diamond_gem_ice_rich_sapphire_icon#size=256
+    Red: https://www.iconfinder.com/icons/2001391/carbuncle_crystal_garnet_gemstone_red_ruby_stone_icon#size=256 
+    Start: http://retro-arcade.com/games/mariobros/-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="top">
+                <h1>Crystal Collector</h1>
+                <h2 class="subt">Collect Crystals to Match the Random #</h2>
+            </div>
+
+            <h3 class="inst justify-content-center">Instructions:</h3>
+            <br>
+            <ol>
+                <li class="inst">Click on Start Button</li>
+                <li class="inst">A Random Number will be generated</li>
+                <li class="inst">Each Crystal has a value randomly generated between 1-12</li>
+                <li class="inst">Click on each Cristal to add the values to Equal the Random #</li>
+                <li class="inst">Match your picks to the number YOU WIN!, Your number is less keed adding; your number is greater than the
+                    Compute Pick, you loose</li>
+            </ol>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6 align-self-right">
+                    <button type="button" class="btn btn-warning align-self-center start">Start</button>
+                </div>
+                <div class="col-md-6 align-self-left">
+                    <button type="button" class="btn btn-danger align-self-center reset">Reset</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12 align-self-center">
+                    <p id="number">##</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-md-3 align-self-center">
+                    <button type="button" class="crystal" id="blue">
+                        <img class="pic" src="assets/images/blueC.png">
+                    </button>
+                </div>
+                <div class="col-md-3 align-self-center">
+                    <button type="button" class="crystal" id="pink">
+                        <img class="pic" src="assets/images/pinkC.jpg">
+                    </button>
+                </div>
+                <div class="col-md-3 align-self-center">
+                    <button type="button" class="crystal" id="green">
+                        <img class="pic" src="assets/images/greenC.png">
+                    </button>
+                </div>
+                <div class="col-md-3 align-self-center">
+                    <button type="button" class="crystal" id="red">
+                        <img class="pic" src="assets/images/rubyC.png">
+                    </button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                <div "pcAns">
+                    <p id="gameOutput">
+                        <span>Message:</span>
+                    </p>
+                </div>
+
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Score</th>
+                            <th scope="col">Result</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Wins</th>
+                            <td>
+                                <span id="win"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Looses</th>
+                            <td>
+                                <span id="lost"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Current Game Sum:</th>
+                            <td>
+                                <span id="guessS"></span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>
