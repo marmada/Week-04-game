@@ -15,7 +15,27 @@ $(document).ready(function () {
     var win = 0;
     var loose = 0;
 
+    var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "assets/sounds/Tetris10ATYPE.ogg");
+
+    var winElement = document.createElement ("audio")
+        winElement.setAttribute ("src", "assets/sounds/Alarm02.wav")
+
+        var looseElement = document.createElement ("audio")
+        looseElement.setAttribute ("src", "assets/sounds/ringout.wav")
+
     $(".start").on("click", function () {
+
+        audioElement.play();
+        pink = 0;
+        blue = 0;
+        green = 0;
+        red = 0;
+        sumT = 0;
+        randomN = 0
+        console.log(sumT);
+        $("#guessS").text(sumT);
+        $("#number").text(randomN);
 
         randomN = (Math.floor(Math.random() * 101) + 19);
         console.log(randomN);
@@ -80,7 +100,7 @@ $(document).ready(function () {
         sumT = sumT + red;
 
         $("#guessS").text(sumT);
-        
+
         CheckWin();
 
     });
@@ -90,6 +110,7 @@ $(document).ready(function () {
         if (sumT > randomN) {
             loose++
             $("#lost").text(loose);
+            looseElement.play();
             $("#gameOutput").text("You've LOST, Click on Start to Play again")
             pink = 0;
             blue = 0;
@@ -106,6 +127,7 @@ $(document).ready(function () {
 
             win++
             $("#win").text(win);
+            winElement.play();
             $("#gameOutput").text("You've WON, Click on Start to Play again")
             pink = 0;
             blue = 0;
