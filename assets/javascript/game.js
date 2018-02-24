@@ -117,7 +117,7 @@ $(document).ready(function () {
             green = 0;
             red = 0;
             sumT = 0;
-            randomN = 0
+            
             console.log(sumT);
          ;
             $("#number").text("##");
@@ -134,7 +134,7 @@ $(document).ready(function () {
             green = 0;
             red = 0;
             sumT = 0;
-            randomN = 0
+            
             console.log(sumT);
            ;
             $("#number").text("##");
